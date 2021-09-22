@@ -1,0 +1,40 @@
+.window {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border: solid $lightgray 2px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 0.7rem;
+  &__header {
+    width: 100%;
+    height: 3.5rem;
+    background: $darkgray;
+    border-top-right-radius: 0.55rem;
+    border-top-left-radius: 0.55rem;
+    border-bottom: 0.75rem solid $lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__header-tabs {
+    margin-left: 5rem;
+    display: flex;
+  }
+
+  &__header-tab {
+    @include tab;
+  }
+  
+  &__main {
+    height: calc(100% - 3.5rem);
+    background: #fff;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+
+}
