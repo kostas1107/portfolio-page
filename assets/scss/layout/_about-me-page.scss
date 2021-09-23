@@ -1,0 +1,210 @@
+.about-me-page {
+  // background-image: url('../../img/pattern.jpg');
+  // background-size: cover;
+  // background-repeat: repeat;
+  background-image: radial-gradient( circle 343px at 46.3% 47.5%,  rgba(242,242,242,1) 0%, rgba(241,241,241,1) 72.9% );
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+    // border: solid 1px black;
+    border-radius: 0.7rem;
+    margin-bottom: 3rem;
+    height: rem(270);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &__summary-heading-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &__summary-heading {
+    text-align: center;
+    margin: 0;
+    width: 50%;
+    padding: 3rem 0 1rem;
+  }
+  &__summary-left {
+    width: 50%;
+    height: 100%;
+  }
+  &__summary-img {
+    display: block;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+  }
+  &__summary-right {
+    width: 47%;
+    margin-right: 1rem;
+  }
+
+  &__summary-text-heading {
+    text-align: center;
+  }
+
+  &__summary-text {
+    line-height: 1.2rem;
+  }
+
+  &__education {
+    margin: 0 2rem 3rem;
+  }
+
+  &__education-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #11324d;
+  }
+
+  &__education-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: solid 1px black;
+    border-radius: 0.7rem;
+    height: rem(270);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &__education-left {
+    width: 47%;
+    margin-left: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &__education-title {
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  &__education-years {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__education-gained-skills-heading {
+    margin: 0;
+  }
+
+  &__education-gained-skills-list {
+    margin-top: 0.5rem;
+  }
+
+  &__education-right {
+    width: 50%;
+    height: 100%;
+  }
+
+  &__education-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+  }
+
+  &__certifications {
+    margin: 0 2rem;
+  }
+
+  &__certifications-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #11324d;
+  }
+
+  &__certifications-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__certification {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid black;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &__certification-left {
+    width: 15%;
+  }
+
+  &__certification-img {
+    display: block;
+    opacity: 0.9;
+    width: 100%;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+  }
+
+  &__certification-right {
+    width: 85%;
+  }
+
+  &__certification-title {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  &__certification-organization {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__certification-date {
+    margin-top: 0;
+  }
+
+  &__skills {
+    padding: 2rem 2rem 2rem;
+  }
+
+  &__skills-heading {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #11324d;
+  }
+
+  &__skills-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__skill {
+    padding: 0.5rem 1rem;
+    // border: 1px solid black;
+    border-radius: 0.7rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+h5 {
+  color: gray;
+}

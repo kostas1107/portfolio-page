@@ -32,9 +32,10 @@
   
   &__main {
     height: calc(100% - 3.5rem);
-    background: #fff;
+    // background: #d5d5d5;
     border-bottom-left-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
+    overflow-y: auto;
   }
 
 }
