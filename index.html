@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/dist/css/main.min.css" />
+    <script src="app.js" defer></script>
   </head>
 
   <body>
     <section class="window">
       <header class="window__header">
         <div class="window__header-tabs">
-          <div class="window__header-tab">About</div>
-          <div class="window__header-tab">Projects</div>
-          <div class="window__header-tab">Contact</div>
+          <div class="window__header-tab" id="about-tab">About</div>
+          <div class="window__header-tab" id="projects-tab">Projects</div>
+          <div class="window__header-tab" id="contact-tab">Contact</div>
         </div>
       </header>
       <main class="window__main">
-        <section class="about-me-page">
+        <section class="about-me-page show" id="about-pg">
           <div class="about-me-page__summary-heading-wrapper">
             <h1 class="about-me-page__summary-heading">
               Hi! My name is Kostas and I am a Frontend developer.
@@ -194,7 +195,7 @@
             </div>
           </div>
         </section>
-        <section class="projects-page">
+        <section class="projects-page" id="projects-pg">
           <div class="projects-page__content">
             <div class="projects-page__image-wrapper">
               <img
@@ -213,7 +214,7 @@
             </div>
           </div>
         </section>
-        <section class="contact-page">
+        <section class="contact-page" id="contact-pg">
           <h1 class="contact-page__heading">
             Submit the form to get in touch.
           </h1>

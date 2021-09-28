@@ -356,6 +356,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.show {
+  display: block !important;
+}
+
 .window {
   position: absolute;
   width: 95%;
@@ -693,6 +697,7 @@ h5 {
 }
 
 .contact-page {
+  display: none;
   background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
   height: 100%;
 }
