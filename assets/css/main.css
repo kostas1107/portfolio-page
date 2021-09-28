@@ -654,13 +654,13 @@ h5 {
 }
 
 .projects-page__content {
-  width: 60%;
-  height: 60%;
   position: absolute;
   top: 0;
-  bottom: 20%;
-  left: 0;
+  bottom: 0;
   right: 0;
+  left: 0;
+  width: 70%;
+  height: 80%;
   margin: auto;
 }
 
@@ -672,7 +672,11 @@ h5 {
 
 .projects-page__image {
   display: block;
-  width: 50%;
+  width: 30%;
+}
+
+.projects-page__text {
+  width: 100%;
 }
 
 .projects-page__heading {
