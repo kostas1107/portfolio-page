@@ -10,9 +10,11 @@
     margin: 0 2rem;
     // border: solid 1px black;
     border-radius: 0.7rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     height: rem(270);
-    background-color: #fff;
+    background-image: url('../../img/summary-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
@@ -27,7 +29,7 @@
     padding: 3rem 0 1rem;
   }
   &__summary-left {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
   &__summary-img {
@@ -40,7 +42,7 @@
     border-bottom-left-radius: 0.6rem;
   }
   &__summary-right {
-    width: 47%;
+    width: 60%;
     margin-right: 1rem;
   }
 
@@ -53,7 +55,7 @@
   }
 
   &__education {
-    margin: 0 2rem 3rem;
+    margin: 0 2rem 5rem;
   }
 
   &__education-heading {
@@ -75,7 +77,7 @@
   }
 
   &__education-left {
-    width: 47%;
+    width: 60%;
     margin-left: 1rem;
     line-height: 1.2rem;
   }
@@ -99,7 +101,7 @@
   }
 
   &__education-right {
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 
@@ -110,10 +112,11 @@
     object-fit: cover;
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
+    // border-radius: 50%;
   }
 
   &__certifications {
-    margin: 0 2rem;
+    margin: 0 2rem 4rem;
   }
 
   &__certifications-heading {
@@ -172,7 +175,7 @@
   }
 
   &__skills {
-    padding: 2rem 2rem 2rem;
+    padding: 0rem 2rem 4rem;
   }
 
   &__skills-heading {
@@ -194,6 +197,32 @@
     border-radius: 0.7rem;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  &__socials-wrapper {
+    display: flex;
+    border-top: solid 2px $darkblue;
+    padding-top: 1rem;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social {
+    display: block;
+    padding: 0.5rem;
+  }
+
+  &__social-logo {
+    display: block;
+    width: 40px;
+    height: 40px;
   }
 }
 
