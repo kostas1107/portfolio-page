@@ -405,6 +405,7 @@ body {
 }
 
 .about-me-page {
+  display: none;
   background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
 }
 
@@ -638,6 +639,55 @@ h4 {
 }
 
 h5 {
+  color: gray;
+}
+
+.projects-page {
+  background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
+  height: 100%;
+  position: relative;
+}
+
+.projects-page__content {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.projects-page__image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-page__image {
+  display: block;
+  width: 50%;
+}
+
+.projects-page__heading {
+  text-align: center;
+  font-size: 10rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: gray;
+}
+
+.projects-page__subheading {
+  text-align: center;
+  margin-top: 0;
+  font-size: 2rem;
+  color: gray;
+}
+
+.projects-page__paragraph {
+  text-align: center;
   color: gray;
 }
 /*# sourceMappingURL=main.css.map */

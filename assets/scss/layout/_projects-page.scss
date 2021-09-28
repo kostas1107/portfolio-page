@@ -1,0 +1,52 @@
+.projects-page {
+  background-image: radial-gradient(
+    circle 343px at 46.3% 47.5%,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(241, 241, 241, 1) 72.9%
+  );
+  height: 100%;
+  position: relative;
+
+  &__content {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    display: block;
+    width: 50%;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 10rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: gray;
+  }
+
+  &__subheading {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2rem;
+    color: gray;
+  }
+
+  &__paragraph {
+    text-align: center;
+    color: gray;
+  }
+}
