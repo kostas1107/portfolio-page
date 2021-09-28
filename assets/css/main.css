@@ -643,6 +643,7 @@ h5 {
 }
 
 .projects-page {
+  display: none;
   background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
   height: 100%;
   position: relative;
@@ -689,5 +690,79 @@ h5 {
 .projects-page__paragraph {
   text-align: center;
   color: gray;
+}
+
+.contact-page {
+  background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
+  height: 100%;
+}
+
+.contact-page__heading {
+  margin-top: 0;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.contact-page__form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-page__form-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-page__inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-page__input {
+  width: calc(50% - 0.5rem);
+  padding: 1rem;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 0.7rem;
+}
+
+.contact-page__input:focus {
+  outline: none;
+}
+
+.contact-page__textarea {
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  resize: none;
+}
+
+.contact-page__textarea:focus {
+  outline: none;
+}
+
+.contact-page__button-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-page__button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.7rem 2.5rem;
+  border: 2px solid #11324d;
+  border-radius: 0.7rem;
+  color: #11324d;
+  cursor: pointer;
+  transition: ease all 0.3s;
+}
+
+.contact-page__button:hover {
+  background-color: #11324d;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
