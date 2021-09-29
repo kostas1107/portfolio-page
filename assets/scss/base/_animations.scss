@@ -1,0 +1,9 @@
+@keyframes moveRight {
+  from {}
+  to {transform: translateX(14px);}
+}
+
+@keyframes moveLeft {
+  from {transform: translateX(14px);}
+  to {transform: translateX(0px);}
+}

@@ -21,6 +21,11 @@ body {
   border-right: none;
 }
 
+.active-light {
+  background: #F3D5C0 !important;
+  border-right: none;
+}
+
 .error {
   background-color: #EE4B2B !important;
   display: block !important;
@@ -30,4 +35,25 @@ body {
   background-color: #9ccc65 !important;
   display: block !important;
 }
+
+.move-right {
+  animation: moveRight 0.5s forwards !important;
+  background-color: #D4B499 !important;
+}
+
+.move-left {
+  animation: moveLeft 0.5s forwards !important;
+}
+
+.light-theme {
+  background: #D4B499 !important;
+  border-color: #F3D5C0 !important;
+}
+
+.light-tab {
+  color: #000 !important;
+  border-right-color: #F3D5C0 !important;
+  border-left-color: #F3D5C0 !important;
+}
+
 

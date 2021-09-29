@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@keyframes moveRight {
+  from {
+  }
+  to {
+    transform: translateX(14px);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(14px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +23,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -365,6 +382,11 @@ body {
   border-right: none;
 }
 
+.active-light {
+  background: #F3D5C0 !important;
+  border-right: none;
+}
+
 .error {
   background-color: #EE4B2B !important;
   display: block !important;
@@ -373,6 +395,26 @@ body {
 .success {
   background-color: #9ccc65 !important;
   display: block !important;
+}
+
+.move-right {
+  animation: moveRight 0.5s forwards !important;
+  background-color: #D4B499 !important;
+}
+
+.move-left {
+  animation: moveLeft 0.5s forwards !important;
+}
+
+.light-theme {
+  background: #D4B499 !important;
+  border-color: #F3D5C0 !important;
+}
+
+.light-tab {
+  color: #000 !important;
+  border-right-color: #F3D5C0 !important;
+  border-left-color: #F3D5C0 !important;
 }
 
 .window {
@@ -394,20 +436,41 @@ body {
   background: #343d46;
   border-top-right-radius: 0.55rem;
   border-top-left-radius: 0.55rem;
-  border-bottom: 0.75rem solid #4f5b66;
+  border-bottom: 0.5rem solid #4f5b66;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.window__header-switcher {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  width: 32px;
+  height: 16px;
+  background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.window__header-switcher-circle {
+  margin: 0 0.2rem;
+  min-width: 12px;
+  min-height: 12px;
+  background-color: #343d46;
+  border-radius: 50%;
 }
 
 .window__header-tabs {
+  margin-top: 1rem;
   margin-left: 5rem;
   display: flex;
 }
 
 .window__header-tab {
   color: #fff;
-  padding: 0.5rem 5rem 0.3rem 1rem;
+  padding: 0.5rem 5rem 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-top-left-radius: 0.7rem;

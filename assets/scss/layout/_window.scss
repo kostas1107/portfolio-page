@@ -15,13 +15,34 @@
     background: $darkgray;
     border-top-right-radius: 0.55rem;
     border-top-left-radius: 0.55rem;
-    border-bottom: 0.75rem solid $lightgray;
+    border-bottom: 0.5rem solid $lightgray;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__header-switcher {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    width: 32px;
+    height: 16px;
+    background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__header-switcher-circle {
+    margin: 0 0.2rem;
+    min-width: 12px;
+    min-height: 12px;
+    background-color: $darkgray;
+    border-radius: 50%;
   }
 
   &__header-tabs {
+    margin-top: 1rem;
     margin-left: 5rem;
     display: flex;
   }
