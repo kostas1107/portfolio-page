@@ -16,3 +16,18 @@ body {
   display: block !important;
 }
 
+.active {
+  background: $lightgray;
+  border-right: none;
+}
+
+.error {
+  background-color: #EE4B2B !important;
+  display: block !important;
+}
+
+.success {
+  background-color: #9ccc65 !important;
+  display: block !important;
+}
+

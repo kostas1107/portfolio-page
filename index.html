@@ -12,7 +12,7 @@
     <section class="window">
       <header class="window__header">
         <div class="window__header-tabs">
-          <div class="window__header-tab" id="about-tab">About</div>
+          <div class="window__header-tab active" id="about-tab">About</div>
           <div class="window__header-tab" id="projects-tab">Projects</div>
           <div class="window__header-tab" id="contact-tab">Contact</div>
         </div>
@@ -90,7 +90,14 @@
               Certifications
             </h2>
             <div class="about-me-page__certifications-wrapper">
-              <div class="about-me-page__certification">
+              <a
+                href="https://www.udemy.com/certificate/UC-739ab811-08a1-41e1-96f0-562f290132f2/"
+                class="about-me-page__certification"
+                target="_blank"
+              >
+                <div class="about-me-page__credentials-wrapper">
+                  <div class="about-me-page__credentials">See credential</div>
+                </div>
                 <div class="about-me-page__certification-left">
                   <img
                     src="assets/img/udemy-logo.png"
@@ -106,8 +113,15 @@
                     Udemy - Issued Aug 2021
                   </h5>
                 </div>
-              </div>
-              <div class="about-me-page__certification">
+              </a>
+              <a
+                href="https://www.udemy.com/certificate/UC-8045ccb5-9563-4133-a387-7d88f550465f/"
+                class="about-me-page__certification"
+                target="_blank"
+              >
+                <div class="about-me-page__credentials-wrapper">
+                  <div class="about-me-page__credentials">See credential</div>
+                </div>
                 <div class="about-me-page__certification-left">
                   <img
                     src="assets/img/udemy-logo.png"
@@ -123,8 +137,15 @@
                     Udemy - Issued Sep 2021
                   </h5>
                 </div>
-              </div>
-              <div class="about-me-page__certification">
+              </a>
+              <a
+                href="https://www.udemy.com/certificate/UC-3b2e19c6-379a-475e-91c4-9ae7bf4ca9b8/"
+                class="about-me-page__certification"
+                target="_blank"
+              >
+                <div class="about-me-page__credentials-wrapper">
+                  <div class="about-me-page__credentials">See credential</div>
+                </div>
                 <div class="about-me-page__certification-left">
                   <img
                     src="assets/img/udemy-logo.png"
@@ -140,8 +161,15 @@
                     Udemy - Issued Sep 2021
                   </h5>
                 </div>
-              </div>
-              <div class="about-me-page__certification">
+              </a>
+              <a
+                href="https://www.udemy.com/certificate/UC-2b1405f1-d7b5-40b4-852d-12f66d1a9f26/"
+                class="about-me-page__certification"
+                target="_blank"
+              >
+                <div class="about-me-page__credentials-wrapper">
+                  <div class="about-me-page__credentials">See credential</div>
+                </div>
                 <div class="about-me-page__certification-left">
                   <img
                     src="assets/img/udemy-logo.png"
@@ -157,7 +185,7 @@
                     Udemy - Issued Jul 2021
                   </h5>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="about-me-page__skills">
@@ -218,33 +246,48 @@
           <h1 class="contact-page__heading">
             Submit the form to get in touch.
           </h1>
-          <form class="contact-page__form" action="">
+          <form
+            class="contact-page__form"
+            id="my-form"
+            action="https://formspree.io/f/xzbywpjb"
+            method="POST"
+          >
             <div class="contact-page__form-content">
               <div class="contact-page__inputs">
                 <input
                   class="contact-page__input"
+                  id="name-input"
                   type="text"
                   placeholder="Name"
+                  name="name"
                 />
                 <input
                   class="contact-page__input"
+                  id="email-input"
                   type="text"
                   placeholder="Email"
+                  name="email"
                 />
               </div>
-
               <textarea
                 class="contact-page__textarea"
-                name=""
-                id=""
+                name="message"
+                id="message-field"
                 cols="30"
                 rows="15"
                 placeholder="Your message"
               ></textarea>
+              <div class="contact-page__status-bar" id="status-bar">Message sent successfully!</div>
               <div class="contact-page__button-wrapper">
-                <button class="contact-page__button">Submit</button>
+                <button
+                  class="contact-page__button"
+                  type="submit"
+                  id="submit-button"
+                >
+                  Submit
+                </button>
               </div>
-            </div>  
+            </div>
           </form>
         </section>
       </main>

@@ -27,7 +27,7 @@
     text-align: center;
     margin: 0;
     width: 50%;
-    padding: 3rem 0 1rem;
+    padding: 4rem 0 1rem;
   }
   &__summary-left {
     width: 40%;
@@ -134,15 +134,38 @@
   }
 
   &__certification {
+    text-decoration: none;
     width: 49%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border: 1px solid black;
     border-radius: 0.7rem;
     margin-bottom: 1rem;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    &:hover .about-me-page__credentials-wrapper {
+      opacity: 1;
+    }
+  }
+
+  &__credentials-wrapper {
+    transition: ease all 0.3s;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.7rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__credentials {
+    font-size: 2rem;
+    color: #fff;
   }
 
   &__certification-left {
@@ -157,6 +180,7 @@
     border-bottom-left-radius: 0.6rem;
   }
 
+
   &__certification-right {
     width: 85%;
   }
@@ -164,6 +188,7 @@
   &__certification-title {
     margin-bottom: 0.5rem;
     margin-top: 0;
+    color: $darkblue;
   }
 
   &__certification-organization {
@@ -218,6 +243,10 @@
   &__social {
     display: block;
     padding: 0.5rem;
+    transition: ease all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__social-logo {
