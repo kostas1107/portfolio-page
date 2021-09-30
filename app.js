@@ -20,106 +20,181 @@ const nameInput = document.getElementById('name-input');
 const emailInput = document.getElementById('email-input');
 const messageField = document.getElementById('message-field');
 
+function showPageHandler(show, hide1, hide2) {
+  show.classList.add('show');
+  hide1.classList.remove('show');
+  hide2.classList.remove('show');
+}
+
+function movedAndActiveHandler(activeTab, tab1, tab2, tab3, style1, style2) {
+  if (activeTab === aboutTabActive) {
+    if (moved) {
+      tab1.classList.add(style1);
+      tab2.classList.remove(style1);
+      tab3.classList.remove(style1);
+    } else {
+      tab1.classList.add(style2);
+      tab2.classList.remove(style2);
+      tab3.classList.remove(style2);
+    }
+  } else if (
+    activeTab === projectsTabActive ||
+    activeTab === contactTabActive
+  ) {
+    if (!moved) {
+      tab1.classList.add(style1);
+      tab2.classList.remove(style1);
+      tab3.classList.remove(style1);
+    } else {
+      tab1.classList.add(style2);
+      tab2.classList.remove(style2);
+      tab3.classList.remove(style2);
+    }
+  }
+}
 
 // TAB CONTROL
 aboutTab.addEventListener('click', function () {
   aboutTabActive = true;
   projectsTabActive = false;
   contactTabActive = false;
-  aboutPage.classList.add('show');
-  projectsPage.classList.remove('show');
-  contactPage.classList.remove('show');
-  if (moved && aboutTabActive) {
-    aboutTab.classList.add('active-light');
-    projectsTab.classList.remove('active-light');
-    contactTab.classList.remove('active-light');
-  } else {
-    aboutTab.classList.add('active');
-    projectsTab.classList.remove('active');
-    contactTab.classList.remove('active');
-  }
+  showPageHandler(aboutPage, projectsPage, contactPage);
+  movedAndActiveHandler(
+    aboutTabActive,
+    aboutTab,
+    projectsTab,
+    contactTab,
+    'active-light',
+    'active'
+  );
 });
+
 projectsTab.addEventListener('click', function () {
   aboutTabActive = false;
   projectsTabActive = true;
   contactTabActive = false;
-  projectsPage.classList.add('show');
-  aboutPage.classList.remove('show');
-  contactPage.classList.remove('show');
-  if (!moved && projectsTabActive) {
-    projectsTab.classList.add('active');
-    aboutTab.classList.remove('active');
-    contactTab.classList.remove('active');
-  } else {
-    projectsTab.classList.add('active-light');
-    aboutTab.classList.remove('active-light');
-    contactTab.classList.remove('active-light');
-  }
+  showPageHandler(projectsPage, aboutPage, contactPage);
+  movedAndActiveHandler(
+    projectsTabActive,
+    projectsTab,
+    aboutTab,
+    contactTab,
+    'active',
+    'active-light'
+  );
 });
+
 contactTab.addEventListener('click', function () {
   aboutTabActive = false;
   projectsTabActive = false;
   contactTabActive = true;
-  contactPage.classList.add('show');
-  aboutPage.classList.remove('show');
-  projectsPage.classList.remove('show');
-  if (!moved && contactTabActive) {
-    contactTab.classList.add('active');
-    aboutTab.classList.remove('active');
-    projectsTab.classList.remove('active');
-  } else {
-    contactTab.classList.add('active-light');
-    aboutTab.classList.remove('active-light');
-    projectsTab.classList.remove('active-light');
-  }
+  showPageHandler(contactPage, projectsPage, aboutPage);
+  movedAndActiveHandler(
+    contactTabActive,
+    contactTab,
+    projectsTab,
+    aboutTab,
+    'active',
+    'active-light'
+  );
 });
+
+function themeSwitcherHandler(switcher, removeDirection, addDirection) {
+  switcher.classList.remove(removeDirection);
+  switcher.classList.add(addDirection);
+}
+
+function themeColorHandler(
+  element1,
+  element2,
+  element3,
+  element4,
+  element5,
+  style1,
+  style2
+) {
+  element1.classList.toggle(style1);
+  element2.classList.toggle(style1);
+  element3.classList.toggle(style2);
+  element4.classList.toggle(style2);
+  element5.classList.toggle(style2);
+}
+
+function activeTabThemeHandler(tab1, tab2, tab3, themeColor) {
+  tab1.classList.remove(themeColor);
+  tab2.classList.remove(themeColor);
+  tab3.classList.remove(themeColor);
+}
+
+function currentActiveTabColorHandler(
+  activeTab1,
+  activeTab2,
+  activeTab3,
+  tabEl1,
+  tabEl2,
+  tabEl3,
+  style
+) {
+  if (activeTab1) {
+    tabEl1.classList.add(style);
+  } else if (activeTab2) {
+    tabEl2.classList.add(style);
+  } else if (activeTab3) {
+    tabEl3.classList.add(style);
+  }
+}
 
 // THEME SWITCHER
 switcher.addEventListener('click', function () {
   if (!moved) {
-    circle.classList.remove('move-left');
-    circle.classList.add('move-right');
-    windowHeader.classList.add('light-theme');
-    mainWindow.classList.add('light-theme');
-    aboutTab.classList.add('light-tab');
-    projectsTab.classList.add('light-tab');
-    contactTab.classList.add('light-tab');
-    if (aboutTabActive) {
-      aboutTab.classList.add('active-light');
-    } else if (projectsTabActive) {
-      projectsTab.classList.add('active-light');
-    } else if (contactTabActive) {
-      contactTab.classList.add('active-light');
-    }
-    aboutTab.classList.remove('active');
-    projectsTab.classList.remove('active');
-    contactTab.classList.remove('active');
+    themeSwitcherHandler(circle, 'move-left', 'move-right');
+    themeColorHandler(
+      windowHeader,
+      mainWindow,
+      aboutTab,
+      projectsTab,
+      contactTab,
+      'light-theme',
+      'light-tab'
+    );
+    currentActiveTabColorHandler(
+      aboutTabActive,
+      projectsTabActive,
+      contactTabActive,
+      aboutTab,
+      projectsTab,
+      contactTab,
+      'active-light'
+    );
+    activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active');
     moved = true;
   } else if (moved) {
-    circle.classList.remove('move-right');
-    circle.classList.add('move-left');
-    windowHeader.classList.remove('light-theme');
-    mainWindow.classList.remove('light-theme');
-    aboutTab.classList.remove('light-tab');
-    projectsTab.classList.remove('light-tab');
-    contactTab.classList.remove('light-tab');
-    if (aboutTabActive) {
-      aboutTab.classList.add('active');
-    } else if (projectsTabActive) {
-      projectsTab.classList.add('active');
-    } else if (contactTabActive) {
-      contactTab.classList.add('active');
-    }
-    aboutTab.classList.remove('active-light');
-    projectsTab.classList.remove('active-light');
-    contactTab.classList.remove('active-light');
+    themeSwitcherHandler(circle, 'move-right', 'move-left');
+    themeColorHandler(
+      windowHeader,
+      mainWindow,
+      aboutTab,
+      projectsTab,
+      contactTab,
+      'light-theme',
+      'light-tab'
+    );
+    currentActiveTabColorHandler(
+      aboutTabActive,
+      projectsTabActive,
+      contactTabActive,
+      aboutTab,
+      projectsTab,
+      contactTab,
+      'active'
+    );
+    activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active-light');
     moved = false;
   }
 });
 
-
 // FORM SUBMISSION
-async function handleSubmit(event) {
+async function submitHandler(event) {
   event.preventDefault();
   const data = new FormData(event.target);
   const statusBar = document.getElementById('status-bar');
@@ -155,4 +230,4 @@ async function handleSubmit(event) {
   }
 }
 
-form.addEventListener('submit', handleSubmit);
+form.addEventListener('submit', submitHandler);
