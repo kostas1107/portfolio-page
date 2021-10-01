@@ -5,6 +5,11 @@ const projectsTab = document.getElementById('projects-tab');
 const contactTab = document.getElementById('contact-tab');
 const switcher = document.getElementById('header-switcher');
 const circle = document.getElementById('switcher-circle');
+const burgerBtn = document.getElementById('burger-btn');
+const burgerMenu = document.getElementById('burger-menu');
+const hamburgerAbout = document.getElementById('hamburger-about');
+const hamburgerProjects = document.getElementById('hamburger-projects');
+const hamburgerContact = document.getElementById('hamburger-contact');
 
 let moved = false;
 let aboutTabActive = true;
@@ -19,6 +24,10 @@ const form = document.getElementById('my-form');
 const nameInput = document.getElementById('name-input');
 const emailInput = document.getElementById('email-input');
 const messageField = document.getElementById('message-field');
+
+function toggleBurger () {
+  burgerMenu.classList.toggle('show');
+}
 
 function showPageHandler(show, hide1, hide2) {
   show.classList.add('show');
@@ -53,7 +62,24 @@ function movedAndActiveHandler(activeTab, tab1, tab2, tab3, style1, style2) {
   }
 }
 
+burgerBtn.addEventListener('click', toggleBurger);
+
 // TAB CONTROL
+hamburgerAbout.addEventListener('click', function () {
+  showPageHandler(aboutPage, projectsPage, contactPage);
+  toggleBurger();
+});
+
+hamburgerProjects.addEventListener('click', function () {
+  showPageHandler(projectsPage, contactPage, aboutPage);
+  toggleBurger();
+});
+
+hamburgerContact.addEventListener('click', function () {
+  showPageHandler(contactPage, aboutPage, projectsPage);
+  toggleBurger();
+});
+
 aboutTab.addEventListener('click', function () {
   aboutTabActive = true;
   projectsTabActive = false;
@@ -166,6 +192,7 @@ switcher.addEventListener('click', function () {
       contactTab,
       'active-light'
     );
+    burgerMenu.classList.add('mobile-light-menu');
     activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active');
     moved = true;
   } else if (moved) {
@@ -188,6 +215,7 @@ switcher.addEventListener('click', function () {
       contactTab,
       'active'
     );
+    burgerMenu.classList.remove('mobile-light-menu');
     activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active-light');
     moved = false;
   }

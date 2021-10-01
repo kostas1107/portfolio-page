@@ -1,5 +1,6 @@
 body {
   position: relative;
+  width: 100vw;
   max-width: 1200px;
   margin: auto;
   height: 95vh;
@@ -10,6 +11,10 @@ body {
   background-attachment: fixed;
   color: $darkblue;
   font-family: $poppins;
+  @media (max-width: $sm) {
+    height: 100vh;
+    background: none;
+  }
 }
 
 .show {
@@ -54,6 +59,11 @@ body {
   color: #000 !important;
   border-right-color: #F3D5C0 !important;
   border-left-color: #F3D5C0 !important;
+}
+
+.mobile-light-menu {
+  background-color: #F3D5C0 !important;
+  color: #000 !important;
 }
 
 

@@ -6,17 +6,22 @@
   background-image: radial-gradient( circle 343px at 46.3% 47.5%,  rgba(242,242,242,1) 0%, rgba(241,241,241,1) 72.9% );
   &__summary {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 0 2rem;
     // border: solid 1px black;
     border-radius: 0.7rem;
     margin-bottom: 5rem;
-    height: rem(270);
+    height: rem(300);
     background-image: url('../../img/summary-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media (max-width: $sm) {
+      height: 100%;
+      margin: 0 1rem;
+    }
   }
 
   &__summary-heading-wrapper {
@@ -28,10 +33,19 @@
     margin: 0;
     width: 50%;
     padding: 4rem 0 1rem;
+    @media (max-width: $sm) {
+      width: 95%;
+    }
   }
   &__summary-left {
     width: 40%;
     height: 100%;
+    @media (max-width: $sm) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border-bottom: solid rgba(0, 0, 0, 0.1) 2px;
+    }
   }
   &__summary-img {
     display: block;
@@ -41,10 +55,17 @@
     height: 100%;
     border-top-left-radius: 0.6rem;
     border-bottom-left-radius: 0.6rem;
+    @media (max-width: $sm) {
+      width: 70%;
+      transform: translateX(11px);
+    }
   }
   &__summary-right {
     width: 60%;
-    margin-right: 1rem;
+    padding: 0.5rem;
+    @media (max-width: $sm) {
+      width: 100%;
+    }
   }
 
   &__summary-text-heading {
@@ -57,6 +78,9 @@
 
   &__education {
     margin: 0 2rem 5rem;
+    @media (max-width: $sm) {
+      margin: 0 1rem 5rem;
+    }
   }
 
   &__education-heading {
@@ -72,15 +96,23 @@
     align-items: center;
     // border: solid 1px black;
     border-radius: 0.7rem;
-    height: rem(270);
+    height: rem(300);
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media (max-width: $sm) {
+      height: 100%;
+      flex-wrap: wrap;
+    }
   }
 
   &__education-left {
     width: 60%;
-    margin-left: 1rem;
+    padding: 0.5rem;
     line-height: 1.2rem;
+    @media (max-width: $sm) {
+      width: 100%;
+      height: 50%;
+    }
   }
 
   &__education-title {
@@ -104,6 +136,10 @@
   &__education-right {
     width: 40%;
     height: 100%;
+    @media (max-width: $sm) {
+      width: 100%;
+      height: 50%;
+    }
   }
 
   &__education-img {
@@ -113,11 +149,20 @@
     object-fit: cover;
     border-top-right-radius: 0.6rem;
     border-bottom-right-radius: 0.6rem;
-    // border-radius: 50%;
+    @media (max-width: $sm) {
+      width: 100%;
+      max-height: rem(200);
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0.6rem;
+      object-fit: cover;
+    }
   }
 
   &__certifications {
     margin: 0 2rem 4rem;
+    @media (max-width: $sm) {
+      margin: 0 1rem 4rem;
+    }
   }
 
   &__certifications-heading {
@@ -134,6 +179,8 @@
   }
 
   &__certification {
+    position: relative;
+    min-height: rem(95);
     text-decoration: none;
     width: 49%;
     display: flex;
@@ -146,6 +193,12 @@
     position: relative;
     &:hover .about-me-page__credentials-wrapper {
       opacity: 1;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+    @media (max-width: $xs) {
+      min-height: rem(110);
     }
   }
 
@@ -161,11 +214,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: $sm) {
+      display: none;
+    }
   }
 
   &__credentials {
     font-size: 2rem;
     color: #fff;
+  }
+
+  &__certification-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  &__click-credential {
+    display: none;
+    position: absolute;
+    bottom: 1%;
+    right: 2%;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+    @media (max-width: $sm) {
+      display: block;
+    }
   }
 
   &__certification-left {
@@ -202,6 +277,9 @@
 
   &__skills {
     padding: 0rem 2rem 4rem;
+    @media (max-width: $sm) {
+      padding: 0rem 1rem 4rem;
+    }
   }
 
   &__skills-heading {
@@ -214,10 +292,13 @@
   &__skills-wrapper {
     margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
   }
 
-  &__skill {
+  &__skill {  
+    margin: 0.5rem;
     padding: 0.5rem 1rem;
     // border: 1px solid black;
     border-radius: 0.7rem;
