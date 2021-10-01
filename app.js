@@ -10,6 +10,7 @@ const burgerMenu = document.getElementById('burger-menu');
 const hamburgerAbout = document.getElementById('hamburger-about');
 const hamburgerProjects = document.getElementById('hamburger-projects');
 const hamburgerContact = document.getElementById('hamburger-contact');
+const mobileHeading = document.getElementById('mobile-heading');
 
 let moved = false;
 let aboutTabActive = true;
@@ -25,14 +26,22 @@ const nameInput = document.getElementById('name-input');
 const emailInput = document.getElementById('email-input');
 const messageField = document.getElementById('message-field');
 
+function mobileThemeColors (button, item1, item2, item3) {
+  button.classList.toggle('light-color');
+  item1.classList.toggle('light-color');
+  item2.classList.toggle('light-color');
+  item3.classList.toggle('light-color');
+}
+
 function toggleBurger () {
   burgerMenu.classList.toggle('show');
 }
 
-function showPageHandler(show, hide1, hide2) {
+function showPageHandler(show, hide1, hide2, heading) {
   show.classList.add('show');
   hide1.classList.remove('show');
   hide2.classList.remove('show');
+  mobileHeading.innerHTML = heading;
 }
 
 function movedAndActiveHandler(activeTab, tab1, tab2, tab3, style1, style2) {
@@ -66,17 +75,17 @@ burgerBtn.addEventListener('click', toggleBurger);
 
 // TAB CONTROL
 hamburgerAbout.addEventListener('click', function () {
-  showPageHandler(aboutPage, projectsPage, contactPage);
+  showPageHandler(aboutPage, projectsPage, contactPage, 'About');
   toggleBurger();
 });
 
 hamburgerProjects.addEventListener('click', function () {
-  showPageHandler(projectsPage, contactPage, aboutPage);
+  showPageHandler(projectsPage, contactPage, aboutPage, 'Projects');
   toggleBurger();
 });
 
 hamburgerContact.addEventListener('click', function () {
-  showPageHandler(contactPage, aboutPage, projectsPage);
+  showPageHandler(contactPage, aboutPage, projectsPage, 'Contact');
   toggleBurger();
 });
 
@@ -84,7 +93,7 @@ aboutTab.addEventListener('click', function () {
   aboutTabActive = true;
   projectsTabActive = false;
   contactTabActive = false;
-  showPageHandler(aboutPage, projectsPage, contactPage);
+  showPageHandler(aboutPage, projectsPage, contactPage, 'About');
   movedAndActiveHandler(
     aboutTabActive,
     aboutTab,
@@ -99,7 +108,7 @@ projectsTab.addEventListener('click', function () {
   aboutTabActive = false;
   projectsTabActive = true;
   contactTabActive = false;
-  showPageHandler(projectsPage, aboutPage, contactPage);
+  showPageHandler(projectsPage, aboutPage, contactPage, 'Projects');
   movedAndActiveHandler(
     projectsTabActive,
     projectsTab,
@@ -114,7 +123,7 @@ contactTab.addEventListener('click', function () {
   aboutTabActive = false;
   projectsTabActive = false;
   contactTabActive = true;
-  showPageHandler(contactPage, projectsPage, aboutPage);
+  showPageHandler(contactPage, projectsPage, aboutPage, 'Contact');
   movedAndActiveHandler(
     contactTabActive,
     contactTab,
@@ -192,6 +201,9 @@ switcher.addEventListener('click', function () {
       contactTab,
       'active-light'
     );
+    mobileThemeColors(burgerBtn, hamburgerAbout, hamburgerProjects, hamburgerContact);
+    mobileHeading.classList.toggle('heading-dark');
+    switcher.classList.toggle('light-bg');
     burgerMenu.classList.add('mobile-light-menu');
     activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active');
     moved = true;
@@ -215,6 +227,9 @@ switcher.addEventListener('click', function () {
       contactTab,
       'active'
     );
+    mobileThemeColors(burgerBtn, hamburgerAbout, hamburgerProjects, hamburgerContact);
+    mobileHeading.classList.toggle('heading-dark');
+    switcher.classList.toggle('light-bg');
     burgerMenu.classList.remove('mobile-light-menu');
     activeTabThemeHandler(aboutTab, projectsTab, contactTab, 'active-light');
     moved = false;

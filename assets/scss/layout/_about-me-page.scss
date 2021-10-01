@@ -3,16 +3,18 @@
   // background-image: url('../../img/pattern.jpg');
   // background-size: cover;
   // background-repeat: repeat;
-  background-image: radial-gradient( circle 343px at 46.3% 47.5%,  rgba(242,242,242,1) 0%, rgba(241,241,241,1) 72.9% );
+  background-image: radial-gradient(
+    circle 343px at 46.3% 47.5%,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(241, 241, 241, 1) 72.9%
+  );
   &__summary {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 0 2rem;
-    // border: solid 1px black;
     border-radius: 0.7rem;
-    margin-bottom: 5rem;
     height: rem(300);
     background-image: url('../../img/summary-bg.jpg');
     background-size: cover;
@@ -31,10 +33,10 @@
   &__summary-heading {
     text-align: center;
     margin: 0;
-    width: 50%;
-    padding: 4rem 0 1rem;
+    width: 60%;
+    padding: 3rem 0 1rem;
     @media (max-width: $sm) {
-      width: 95%;
+      width: 90%;
     }
   }
   &__summary-left {
@@ -77,9 +79,9 @@
   }
 
   &__education {
-    margin: 0 2rem 5rem;
+    margin: 3rem 2rem 0rem;
     @media (max-width: $sm) {
-      margin: 0 1rem 5rem;
+      margin: 3rem 1rem 0rem;
     }
   }
 
@@ -94,7 +96,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border: solid 1px black;
     border-radius: 0.7rem;
     height: rem(300);
     background-color: #fff;
@@ -159,9 +160,9 @@
   }
 
   &__certifications {
-    margin: 0 2rem 4rem;
+    margin: 3rem 2rem 0rem;
     @media (max-width: $sm) {
-      margin: 0 1rem 4rem;
+      margin: 3rem 1rem 0rem;
     }
   }
 
@@ -255,7 +256,6 @@
     border-bottom-left-radius: 0.6rem;
   }
 
-
   &__certification-right {
     width: 85%;
   }
@@ -276,9 +276,9 @@
   }
 
   &__skills {
-    padding: 0rem 2rem 4rem;
+    margin: 2.5rem 2rem 0rem;
     @media (max-width: $sm) {
-      padding: 0rem 1rem 4rem;
+      margin: 2.5rem 1rem 0rem;
     }
   }
 
@@ -293,11 +293,11 @@
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
   }
 
-  &__skill {  
+  &__skill {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     // border: 1px solid black;
@@ -309,6 +309,7 @@
   &__footer {
     display: flex;
     justify-content: center;
+    margin: 3rem 2rem 0rem;
     padding-bottom: 2rem;
   }
 

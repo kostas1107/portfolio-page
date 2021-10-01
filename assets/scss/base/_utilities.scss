@@ -63,7 +63,16 @@ body {
 
 .mobile-light-menu {
   background-color: #F3D5C0 !important;
-  color: #000 !important;
 }
 
+.light-bg {
+  background-color: $darkgray !important;
+}
 
+.light-color {
+  color: $darkgray !important;
+}
+
+.heading-dark {
+  color: $darkgray !important;
+}

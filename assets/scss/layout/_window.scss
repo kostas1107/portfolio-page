@@ -33,14 +33,11 @@
 
   &__header-switcher {
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     margin-left: 1rem;
     width: 32px;
     height: 16px;
-    background-image: radial-gradient(
-      circle 343px at 46.3% 47.5%,
-      #f2f2f2 0%,
-      #f1f1f1 72.9%
-    );
+    background-color: #fff;
     border-radius: 0.7rem;
     display: flex;
     align-items: center;
@@ -55,10 +52,20 @@
     border-radius: 50%;
   }
 
+  &__header-mobile-heading {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+    @media (max-width: $sm) {
+      display: block;
+    }
+  }
+
   &__header-hamburger {
     position: relative;
     display: none;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     cursor: pointer;
     @media (max-width: $sm) {
       display: block;
@@ -68,7 +75,7 @@
   &__header-hamburger-btn {
     background: none;
     border: none;
-    color: #e9e7e7;
+    color: #fff;
     font-size: 2rem;
     cursor: pointer;
   }

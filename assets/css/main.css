@@ -427,7 +427,18 @@ body {
 
 .mobile-light-menu {
   background-color: #F3D5C0 !important;
-  color: #000 !important;
+}
+
+.light-bg {
+  background-color: #343d46 !important;
+}
+
+.light-color {
+  color: #343d46 !important;
+}
+
+.heading-dark {
+  color: #343d46 !important;
 }
 
 .window {
@@ -473,10 +484,11 @@ body {
 
 .window__header-switcher {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   margin-left: 1rem;
   width: 32px;
   height: 16px;
-  background-image: radial-gradient(circle 343px at 46.3% 47.5%, #f2f2f2 0%, #f1f1f1 72.9%);
+  background-color: #fff;
   border-radius: 0.7rem;
   display: flex;
   align-items: center;
@@ -491,10 +503,23 @@ body {
   border-radius: 50%;
 }
 
+.window__header-mobile-heading {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .window__header-mobile-heading {
+    display: block;
+  }
+}
+
 .window__header-hamburger {
   position: relative;
   display: none;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -507,7 +532,7 @@ body {
 .window__header-hamburger-btn {
   background: none;
   border: none;
-  color: #e9e7e7;
+  color: #fff;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -578,7 +603,6 @@ body {
   justify-content: space-between;
   margin: 0 2rem;
   border-radius: 0.7rem;
-  margin-bottom: 5rem;
   height: 18.75rem;
   background-image: url("../../img/summary-bg.jpg");
   background-size: cover;
@@ -601,13 +625,13 @@ body {
 .about-me-page__summary-heading {
   text-align: center;
   margin: 0;
-  width: 50%;
-  padding: 4rem 0 1rem;
+  width: 60%;
+  padding: 3rem 0 1rem;
 }
 
 @media (max-width: 768px) {
   .about-me-page__summary-heading {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -662,12 +686,12 @@ body {
 }
 
 .about-me-page__education {
-  margin: 0 2rem 5rem;
+  margin: 3rem 2rem 0rem;
 }
 
 @media (max-width: 768px) {
   .about-me-page__education {
-    margin: 0 1rem 5rem;
+    margin: 3rem 1rem 0rem;
   }
 }
 
@@ -758,12 +782,12 @@ body {
 }
 
 .about-me-page__certifications {
-  margin: 0 2rem 4rem;
+  margin: 3rem 2rem 0rem;
 }
 
 @media (max-width: 768px) {
   .about-me-page__certifications {
-    margin: 0 1rem 4rem;
+    margin: 3rem 1rem 0rem;
   }
 }
 
@@ -890,12 +914,12 @@ body {
 }
 
 .about-me-page__skills {
-  padding: 0rem 2rem 4rem;
+  margin: 2.5rem 2rem 0rem;
 }
 
 @media (max-width: 768px) {
   .about-me-page__skills {
-    padding: 0rem 1rem 4rem;
+    margin: 2.5rem 1rem 0rem;
   }
 }
 
@@ -925,6 +949,7 @@ body {
 .about-me-page__footer {
   display: flex;
   justify-content: center;
+  margin: 3rem 2rem 0rem;
   padding-bottom: 2rem;
 }
 
@@ -1027,16 +1052,8 @@ h5 {
 
 .contact-page__heading {
   margin: 0;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding: 3rem 1rem 1rem;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .contact-page__heading {
-    width: 95%;
-    padding-top: 2rem;
-  }
 }
 
 .contact-page__form {
