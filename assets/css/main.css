@@ -641,6 +641,106 @@ body {
   line-height: 1.3rem;
 }
 
+.about-me-page__experience {
+  margin: 3rem 2rem 0rem;
+}
+
+@media (max-width: 768px) {
+  .about-me-page__experience {
+    margin: 3rem 1rem 0rem;
+  }
+}
+
+.about-me-page__experience-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #11324d;
+}
+
+.about-me-page__experience-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.7rem;
+  height: 18.75rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+  .about-me-page__experience-container {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.about-me-page__experience-left {
+  order: 1;
+  width: 60%;
+  padding: 0.5rem;
+  line-height: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .about-me-page__experience-left {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.about-me-page__experience-title {
+  text-align: center;
+  margin-bottom: 0.25rem;
+  line-height: 1.5rem;
+}
+
+.about-me-page__experience-years {
+  color: gray;
+  text-align: center;
+  margin-top: 0;
+}
+
+.about-me-page__experience-gained-skills-heading {
+  margin: 0;
+}
+
+.about-me-page__experience-gained-skills-list {
+  margin-top: 0.5rem;
+  line-height: 1.3rem;
+}
+
+.about-me-page__experience-right {
+  width: 40%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .about-me-page__experience-right {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.about-me-page__experience-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .about-me-page__experience-img {
+    width: 100%;
+    max-height: 12.5rem;
+    border-top-right-radius: 0.6rem;
+    border-bottom-left-radius: 0;
+    object-fit: cover;
+  }
+}
+
 .about-me-page__education {
   margin: 3rem 2rem 0rem;
 }
@@ -694,6 +794,7 @@ body {
 }
 
 .about-me-page__education-years {
+  color: gray;
   text-align: center;
   margin-top: 0;
 }
@@ -704,6 +805,7 @@ body {
 
 .about-me-page__education-gained-skills-list {
   margin-top: 0.5rem;
+  line-height: 1.3rem;
 }
 
 .about-me-page__education-right {
@@ -861,6 +963,7 @@ body {
 }
 
 .about-me-page__certification-organization {
+  color: gray;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -940,10 +1043,6 @@ h2 {
 
 h4 {
   font-weight: 600;
-}
-
-h5 {
-  color: gray;
 }
 
 .projects-page {
