@@ -597,17 +597,13 @@ body {
 }
 
 .about-me-page__summary {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
   margin: 0 2rem;
   border-radius: 0.7rem;
-  height: 18.75rem;
   background-image: url("../../img/summary-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 0.625rem;
 }
 
 @media (max-width: 768px) {
@@ -635,54 +631,14 @@ body {
   }
 }
 
-.about-me-page__summary-left {
-  width: 40%;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .about-me-page__summary-left {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid rgba(0, 0, 0, 0.1) 2px;
-  }
-}
-
-.about-me-page__summary-img {
-  display: block;
-  object-fit: cover;
-  object-position: top;
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 0.6rem;
-  border-bottom-left-radius: 0.6rem;
-}
-
-@media (max-width: 768px) {
-  .about-me-page__summary-img {
-    width: 70%;
-    transform: translateX(11px);
-  }
-}
-
-.about-me-page__summary-right {
-  width: 60%;
-  padding: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .about-me-page__summary-right {
-    width: 100%;
-  }
-}
-
 .about-me-page__summary-text-heading {
+  font-size: 2rem;
   text-align: center;
+  margin-top: 0px;
 }
 
 .about-me-page__summary-text {
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 
 .about-me-page__education {
